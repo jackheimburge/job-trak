@@ -6,7 +6,6 @@ export default class SignUpForm extends Component {
     name: '',
     email: '',
     password: '',
-    username: '',
     confirm: '',
     error: ''
   };
@@ -40,8 +39,6 @@ export default class SignUpForm extends Component {
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-            <label>Username</label>
-            <input type="text" name="username" value={this.state.username} onChange={this.handleChange} required />
             <label>Email</label>
             <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
             <label>Password</label>
