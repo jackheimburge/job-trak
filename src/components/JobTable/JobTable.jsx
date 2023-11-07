@@ -2,7 +2,7 @@ import './JobTable.css';
 
 export default function JobTable() {
     return (
-        <div>
+        <div className='JobTable'>
             JobTable
         </div>
     );

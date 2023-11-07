@@ -2,8 +2,8 @@ import './InfoBtn.css'
 
 export default function InfoBtn() {
     return (
-        <div>
-            InfoBtn
+        <div className='InfoDiv'>
+            <button className='InfoBtn'>?</button>
         </div>
     );
 }

@@ -1,0 +1,21 @@
+.IndexPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6fr 1fr;
+}
+
+.IndexPage .JobTable {
+    grid-column: span 2;
+}
+
+@media (max-width: 770px) {
+    .IndexPage {
+        grid-template-rows: 7fr 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    .IndexPage {
+        grid-template-rows: 6fr 1fr;
+    }
+}

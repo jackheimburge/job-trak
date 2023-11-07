@@ -8,7 +8,6 @@ export default function IndexPage() {
     return (
         <div className='IndexPage'>
             <JobTable />
-            <NewJobForm />
             <AddBtn />
             <InfoBtn />
         </div>
