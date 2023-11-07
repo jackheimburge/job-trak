@@ -1,0 +1,22 @@
+.TableDiv {
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.JobTable {
+    font-size: 1.3rem;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.JobTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.JobTable th,
+.JobTable td {
+    padding: 12px 15px;
+}

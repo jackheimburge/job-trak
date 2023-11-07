@@ -4,8 +4,12 @@
     grid-template-rows: 6fr 1fr;
 }
 
-.IndexPage .JobTable {
+.IndexPage .TableDiv {
     grid-column: span 2;
+}
+
+.IndexPage button {
+    background-color: #009879;
 }
 
 @media (max-width: 770px) {
@@ -17,5 +21,11 @@
 @media (max-width: 430px) {
     .IndexPage {
         grid-template-rows: 6fr 1fr;
+    }
+
+    .IndexPage button {
+        height: 6rem;
+        width: 6rem;
+        margin-bottom: 1rem;
     }
 }
