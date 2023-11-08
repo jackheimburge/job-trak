@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './NewEntryRow.css';
+import * as jobsAPI from '../../utilities/jobs-api';
 
 export default function NewEntryRow() {
 
@@ -20,11 +21,11 @@ export default function NewEntryRow() {
         setJob({ ...job, [name]: value });
     }
 
-    // async function handleSubmit(e) {
-    //     e.preventDefault();
-    //     const addedJob = await jobsAPI.add(job);
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const addedJob = await jobsAPI.add(job);
 
-    // }
+    }
 
     return (
         <>

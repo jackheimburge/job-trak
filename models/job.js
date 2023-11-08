@@ -34,7 +34,14 @@ const jobSchema = new Schema({
     suitability: {
         type: String,
         enum: [1, 2, 3, 4, 5]
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     }
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Job', jobSchema);
