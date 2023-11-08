@@ -1,13 +1,18 @@
 const Job = require('../../models/job');
 
 module.exports = {
-    add
+    add,
+    getAll
 }
 
 async function add(req, res) {
-    console.log('reached controller')
     req.body.user = req.user._id;
     const newJob = await Job.create(req.body);
-    console.log('new job:', newJob);
     res.json(newJob);
+}
+
+async function getAll(req, res) {
+    const userJobs = await Job.find({ user: req.user._id })
+    res.json(userJobs);
+    console.log('user jobs', userJobs)
 }

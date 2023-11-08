@@ -2,14 +2,14 @@ import { useState } from 'react';
 import './NewEntryRow.css';
 import * as jobsAPI from '../../utilities/jobs-api';
 
-export default function NewEntryRow() {
+export default function NewEntryRow({ setJobs, jobs }) {
 
     const [job, setJob] = useState({
         date: '',
         status: 'Applied',
         title: '',
         company: '',
-        type: '',
+        type: 'Office',
         location: '',
         salary: '',
         description: '',
@@ -24,7 +24,18 @@ export default function NewEntryRow() {
     async function handleSubmit(e) {
         e.preventDefault();
         const addedJob = await jobsAPI.add(job);
-
+        setJobs([...jobs, addedJob]);
+        setJob({
+            date: '',
+            status: 'Applied',
+            title: '',
+            company: '',
+            type: 'Office',
+            location: '',
+            salary: '',
+            description: '',
+            suitability: 3
+        });
     }
 
     return (
@@ -51,7 +62,11 @@ export default function NewEntryRow() {
                     <input onChange={handleChange} name='company' value={job.company} type="text" />
                 </td>
                 <td>
-                    <input onChange={handleChange} name='type' value={job.type} type="text" />
+                    <select onChange={handleChange} name="type" id="type">
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Office">Office</option>
+                        <option value="Remote">Remote</option>
+                    </select>
                 </td>
                 <td>
                     <input onChange={handleChange} name='location' value={job.location} type="text" />
@@ -71,9 +86,8 @@ export default function NewEntryRow() {
                         <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                     </select>
                 </td>
+                <td><button onClick={handleSubmit}>👍</button></td>
             </tr>
-            <button onClick={handleSubmit}>Submit</button>
-            <h1>{job.date}</h1>
         </>
     );
 }

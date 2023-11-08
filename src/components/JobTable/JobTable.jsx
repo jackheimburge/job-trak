@@ -3,7 +3,7 @@ import NewEntryRow from '../NewEntryRow/NewEntryRow';
 import './JobTable.css';
 
 
-export default function JobTable() {
+export default function JobTable({ jobs, setJobs }) {
     return (
         <div className='TableDiv'>
             <table className='JobTable'>
@@ -18,10 +18,12 @@ export default function JobTable() {
                         <th>Salary</th>
                         <th>Description</th>
                         <th>Suitability</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <TableRow />
+                    {jobs.map((job, idx) => <TableRow job={job} key={idx} />)}
+
                     <tr>
                         <td>11/8/2023</td>
                         <td>Denied</td>
@@ -33,7 +35,7 @@ export default function JobTable() {
                         <td>Backend Python developer role with spotify</td>
                         <td>⭐️</td>
                     </tr>
-                    <NewEntryRow />
+                    <NewEntryRow setJobs={setJobs} jobs={jobs} />
                 </tbody>
             </table>
         </div>

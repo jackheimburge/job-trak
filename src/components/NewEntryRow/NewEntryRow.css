@@ -3,3 +3,9 @@ select {
     max-width: 70%;
     border-radius: 10px;
 }
+
+.NewEntryRow button {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
