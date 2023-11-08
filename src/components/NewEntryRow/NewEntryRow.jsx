@@ -12,7 +12,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
         type: 'Office',
         location: '',
         salary: '',
-        description: '',
+        url: '',
         suitability: 3
     });
     const [isUploading, setIsUploading] = useState(false);
@@ -35,7 +35,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
             type: 'Office',
             location: '',
             salary: '',
-            description: '',
+            url: '',
             suitability: 3
         });
         setIsUploading(false);
@@ -49,8 +49,9 @@ export default function NewEntryRow({ setJobs, jobs }) {
                 </td>
                 <td>
                     <select onChange={handleChange} name="status" id="status">
-                        <option value="Yet to Apply">Yet to Apply</option>
+                        <option value="Applied">-- Status --</option>
                         <option value="Applied">Applied</option>
+                        <option value="Yet to Apply">Yet to Apply</option>
                         <option value="Interview Scheduled">Interview Scheduled</option>
                         <option value="Currently Interviewing">Currently Interviewing</option>
                         <option value="Rejected">Rejected</option>
@@ -65,6 +66,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
                 </td>
                 <td>
                     <select onChange={handleChange} name="type" id="type">
+                        <option value="Office">- Type -</option>
                         <option value="Hybrid">Hybrid</option>
                         <option value="Office">Office</option>
                         <option value="Remote">Remote</option>

@@ -18,7 +18,8 @@
 
 .JobTable th,
 .JobTable td {
-    padding: 12px 5px;
+    padding: 7px 3px;
+    max-width: 20rem;
 }
 
 .JobTable .red {

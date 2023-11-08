@@ -9,6 +9,7 @@ export default function JobTable({ jobs, setJobs }) {
             <table className='JobTable'>
                 <thead>
                     <tr>
+                        <th id='NumTH'>#</th>
                         <th>Date</th>
                         <th>Status</th>
                         <th>Title</th>
@@ -22,7 +23,7 @@ export default function JobTable({ jobs, setJobs }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {jobs.map((job, idx) => <TableRow job={job} key={idx} />)}
+                    {jobs.map((job, idx) => <TableRow job={job} key={idx} num={idx + 1} />)}
                     <NewEntryRow setJobs={setJobs} jobs={jobs} />
                 </tbody>
             </table>
