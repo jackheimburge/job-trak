@@ -32,7 +32,7 @@ const jobSchema = new Schema({
         type: String,
     },
     suitability: {
-        type: Number,
+        type: String,
         enum: [1, 2, 3, 4, 5]
     }
 })

@@ -1,4 +1,5 @@
 import TableRow from '../TableRow/TableRow';
+import NewEntryRow from '../NewEntryRow/NewEntryRow';
 import './JobTable.css';
 
 
@@ -32,6 +33,7 @@ export default function JobTable() {
                         <td>Backend Python developer role with spotify</td>
                         <td>⭐️</td>
                     </tr>
+                    <NewEntryRow />
                 </tbody>
             </table>
         </div>
