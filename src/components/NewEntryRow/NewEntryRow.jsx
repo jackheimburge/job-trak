@@ -15,6 +15,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
         description: '',
         suitability: 3
     });
+    const [isUploading, setIsUploading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -23,6 +24,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
 
     async function handleSubmit(e) {
         e.preventDefault();
+        setIsUploading(true);
         const addedJob = await jobsAPI.add(job);
         setJobs([...jobs, addedJob]);
         setJob({
@@ -36,6 +38,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
             description: '',
             suitability: 3
         });
+        setIsUploading(false);
     }
 
     return (
@@ -46,13 +49,12 @@ export default function NewEntryRow({ setJobs, jobs }) {
                 </td>
                 <td>
                     <select onChange={handleChange} name="status" id="status">
-                        <option value="Interested">Interested</option>
+                        <option value="Yet to Apply">Yet to Apply</option>
                         <option value="Applied">Applied</option>
                         <option value="Interview Scheduled">Interview Scheduled</option>
-                        <option value="Interview Process">Interview Process</option>
+                        <option value="Currently Interviewing">Currently Interviewing</option>
                         <option value="Rejected">Rejected</option>
                         <option value="Offer Received">Offer Received</option>
-                        <option value="Accepted">Accepted Offer</option>
                     </select>
                 </td>
                 <td>
@@ -86,7 +88,9 @@ export default function NewEntryRow({ setJobs, jobs }) {
                         <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                     </select>
                 </td>
-                <td><button onClick={handleSubmit}>👍</button></td>
+                <td><button style={{
+
+                }} onClick={handleSubmit} disabled={isUploading}>+</button></td>
             </tr>
         </>
     );

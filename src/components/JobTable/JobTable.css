@@ -20,3 +20,19 @@
 .JobTable td {
     padding: 12px 5px;
 }
+
+.JobTable .red {
+    background-color: red;
+}
+
+.JobTable .yellow {
+    background-color: yellow;
+}
+
+.JobTable .blue {
+    background-color: #39A7FF;
+}
+
+.JobTable .green {
+    background-color: #A6FF96;
+}

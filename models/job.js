@@ -8,7 +8,7 @@ const jobSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ['Interested', 'Applied', 'Interview Scheduled', 'Interview Process', 'Rejected', 'Offer received', 'Accepted'],
+        enum: ['Yet to Apply', 'Applied', 'Interview Scheduled', 'Currently Interviewing', 'Rejected', 'Offer Received'],
         required: true
     },
     title: {
