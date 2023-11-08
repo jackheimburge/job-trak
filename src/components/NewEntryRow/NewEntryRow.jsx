@@ -77,7 +77,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
                     <input onChange={handleChange} name='salary' value={job.salary} type="number" />
                 </td>
                 <td>
-                    <input onChange={handleChange} name='description' value={job.description} type="text" />
+                    <input onChange={handleChange} name='url' value={job.url} type="text" />
                 </td>
                 <td>
                     <select onChange={handleChange} name="suitability" id="suitability">

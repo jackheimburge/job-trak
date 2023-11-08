@@ -24,7 +24,7 @@ const jobSchema = new Schema({
     salary: {
         type: Number,
     },
-    description: {
+    url: {
         type: String,
     },
     location: {

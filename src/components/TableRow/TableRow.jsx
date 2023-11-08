@@ -22,7 +22,7 @@ export default function TableRow({ job }) {
             <td>{job.type}</td>
             <td>{job.location}</td>
             <td>${job.salary}</td>
-            <td>{job.description}</td>
+            <td><a target="_blank" href={job.url}>{job.url.substring(0, 20) + '...'}</a></td>
             <td>{job.suitability}</td>
         </tr>
     );

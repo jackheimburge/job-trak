@@ -16,7 +16,7 @@ export default function JobTable({ jobs, setJobs }) {
                         <th>Type</th>
                         <th>Location</th>
                         <th>Salary</th>
-                        <th>Description</th>
+                        <th>URL</th>
                         <th>Suitability</th>
                         <th></th>
                     </tr>
