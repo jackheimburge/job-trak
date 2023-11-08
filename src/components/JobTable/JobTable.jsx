@@ -23,18 +23,6 @@ export default function JobTable({ jobs, setJobs }) {
                 </thead>
                 <tbody>
                     {jobs.map((job, idx) => <TableRow job={job} key={idx} />)}
-
-                    <tr>
-                        <td>11/8/2023</td>
-                        <td>Denied</td>
-                        <td>Python Developer</td>
-                        <td>Spotify</td>
-                        <td>Remote</td>
-                        <td>N/A</td>
-                        <td>$200,000</td>
-                        <td>Backend Python developer role with spotify</td>
-                        <td>⭐️</td>
-                    </tr>
                     <NewEntryRow setJobs={setJobs} jobs={jobs} />
                 </tbody>
             </table>

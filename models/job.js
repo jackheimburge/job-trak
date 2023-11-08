@@ -13,11 +13,9 @@ const jobSchema = new Schema({
     },
     title: {
         type: String,
-        required: true
     },
     company: {
         type: String,
-        required: true
     },
     type: {
         type: String,
@@ -25,9 +23,11 @@ const jobSchema = new Schema({
     },
     salary: {
         type: Number,
-        required: true
     },
     description: {
+        type: String,
+    },
+    location: {
         type: String,
     },
     suitability: {

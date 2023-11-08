@@ -1,17 +1,19 @@
 
 
-export default function TableRow() {
+export default function TableRow({ job }) {
+    const dateParts = job.date.split('T')
+    const parts = dateParts[0].split('-');
     return (
         <tr>
-            <td>11/7/2023</td>
-            <td>Applied</td>
-            <td>Frontend Developer</td>
-            <td>MLB</td>
-            <td>Hybrid</td>
-            <td>San Diego, CA</td>
-            <td>$85,000</td>
-            <td>Frontend react.js job with the San Diego Padres</td>
-            <td>⭐️⭐️⭐️⭐️</td>
+            <td>{`${parts[1]}-${parts[2]}-${parts[0]}`}</td>
+            <td>{job.status}</td>
+            <td>{job.title}</td>
+            <td>{job.company}</td>
+            <td>{job.type}</td>
+            <td>{job.location}</td>
+            <td>${job.salary}</td>
+            <td>{job.description}</td>
+            <td>{job.suitability}</td>
         </tr>
     );
 }
