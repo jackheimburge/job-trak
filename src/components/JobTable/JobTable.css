@@ -1,20 +1,20 @@
 .JobTable {
     margin: 3rem auto;
-    font-size: 1rem;
+    font-size: 0.75rem;
     border-radius: 20px;
     border-collapse: collapse;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: left;
 }
 
 .JobTable thead tr {
     background-color: #009879;
     color: #ffffff;
-    text-align: left;
 }
 
 .JobTable th,
 .JobTable td {
-    padding: 7px 3px;
+    padding: 7px 5px;
     max-width: 20rem;
 }
 
@@ -35,5 +35,10 @@
 }
 
 .JobTable input {
+    max-width: 10rem;
+    display: flex;
+}
+
+.JobTable select {
     max-width: 6rem;
 }

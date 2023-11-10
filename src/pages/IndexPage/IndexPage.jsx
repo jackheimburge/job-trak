@@ -1,5 +1,4 @@
 import JobTable from '../../components/JobTable/JobTable';
-import AddBtn from '../../components/AddBtn/AddBtn';
 import InfoBtn from '../../components/InfoBtn/InfoBtn';
 import * as jobsAPI from '../../utilities/jobs-api';
 import { useState, useEffect } from 'react';
@@ -18,7 +17,6 @@ export default function IndexPage({ user }) {
     return (
         <div className='IndexPage'>
             <JobTable jobs={jobs} setJobs={setJobs} />
-            <AddBtn />
             <InfoBtn />
         </div>
     );
