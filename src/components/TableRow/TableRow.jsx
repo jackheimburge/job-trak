@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import * as jobsAPI from '../../utilities/jobs-api';
 import './TableRow.css'
 
 export default function TableRow({ job, num }) {
     const [isEditing, setIsEditing] = useState(false);
+    const [updatedJob, setUpdatedJob] = useState([]);
 
     async function handleClick() {
         setIsEditing(true);

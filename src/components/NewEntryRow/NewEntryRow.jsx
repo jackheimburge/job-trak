@@ -44,6 +44,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
     return (
         <>
             <tr className='NewEntryRow'>
+                <td>New</td>
                 <td>
                     <input name='date' onChange={handleChange} type="date" value={job.date} />
                 </td>
