@@ -37,3 +37,7 @@
 .JobTable .green {
     background-color: #A6FF96;
 }
+
+.JobTable input {
+    max-width: 6rem;
+}
