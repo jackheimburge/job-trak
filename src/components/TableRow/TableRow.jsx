@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as jobsAPI from '../../utilities/jobs-api';
 import './TableRow.css'
 
-export default function TableRow({ job, num }) {
+export default function TableRow({ job, num, setJobs }) {
     const [isEditing, setIsEditing] = useState(false);
     const [updatedJob, setUpdatedJob] = useState([]);
 
@@ -10,7 +10,17 @@ export default function TableRow({ job, num }) {
         setIsEditing(true);
     }
 
+    async function handleChange(e) {
+        setUpdatedJob({
+            ...job,
+            [e.target.name]: e.target.value
+        })
+
+    }
+
     async function handleSave() {
+        const updatedJobs = await jobsAPI.update(updatedJob);
+        setJobs(updatedJobs);
         setIsEditing(false);
     }
 
@@ -30,9 +40,10 @@ export default function TableRow({ job, num }) {
         <tr className="TableRow">
             <td id="NumTD">{num}</td>
             <td>{`${parts[1]}-${parts[2]}-${parts[0]}`}</td>
-            <td onClick={handleClick} className={status} onBlur={handleSave}>
+            <td className={status} onClick={handleClick} >
                 {isEditing ? (
-                    <select name="status" id="status">
+                    <select onChange={handleChange} onBlur={handleSave} name="status" id="status">
+                        <option value="Applied">--Select--</option>
                         <option value="Applied">Applied</option>
                         <option value="Yet to Apply">Yet to Apply</option>
                         <option value="Interview Scheduled">Interview Scheduled</option>

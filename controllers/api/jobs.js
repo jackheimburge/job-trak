@@ -2,7 +2,8 @@ const Job = require('../../models/job');
 
 module.exports = {
     add,
-    getAll
+    getAll,
+    update
 }
 
 async function add(req, res) {
@@ -14,5 +15,10 @@ async function add(req, res) {
 async function getAll(req, res) {
     const userJobs = await Job.find({ user: req.user._id })
     res.json(userJobs);
-    console.log('user jobs', userJobs)
+}
+
+async function update(req, res) {
+    await Job.findByIdAndUpdate(req.params.id, req.body);
+    const allJobs = await Job.find({});
+    res.json(allJobs);
 }

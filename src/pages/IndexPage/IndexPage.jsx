@@ -10,7 +10,6 @@ export default function IndexPage({ user }) {
     useEffect(function () {
         async function getJobs() {
             const allJobs = await jobsAPI.getJobs();
-            console.log(allJobs, 'ALL JOBS');
             setJobs(allJobs);
         }
         getJobs();

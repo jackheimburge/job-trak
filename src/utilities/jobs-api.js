@@ -8,3 +8,7 @@ export function add(job) {
 export function getJobs() {
     return sendRequest(BASE_URL);
 }
+
+export function update(job) {
+    return sendRequest(`${BASE_URL}/${job._id}/edit`, 'PUT', job);
+}

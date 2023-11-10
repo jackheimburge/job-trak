@@ -23,7 +23,7 @@ export default function JobTable({ jobs, setJobs }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {jobs.map((job, idx) => <TableRow job={job} key={idx} num={idx + 1} />)}
+                    {jobs.map((job, idx) => <TableRow setJobs={setJobs} job={job} key={idx} num={idx + 1} />)}
                     <NewEntryRow setJobs={setJobs} jobs={jobs} />
                 </tbody>
             </table>
