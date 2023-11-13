@@ -14,14 +14,12 @@
     margin: 5rem 0;
 }
 
-.AuthPage img {
-    height: 35rem;
-}
-
 .AuthPage .auth-left {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Agbalumo';
+    font-size: 8rem;
 }
 
 .AuthPage .auth-right {
@@ -33,13 +31,8 @@
 
 .auth-right h1 {
     font-family: 'Agbalumo', sans-serif;
-    font-size: 3rem;
-}
-
-.auth-right h2 {
-    margin: 1rem 0;
-    font-family: 'Agbalumo', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3.3rem;
+    margin-bottom: 5rem;
 }
 
 .auth-right .form-container {
@@ -50,12 +43,22 @@
 .AuthPage .btn-success {
     border: none;
     font-size: 1.5rem;
-    background-color: rgb(57, 117, 233);
+    background-color: black;
+}
+
+.AuthPage .btn-success:hover {
+    background-color: rgba(189, 14, 14, 0.709);
 }
 
 .AuthPage .btn-primary {
     border: none;
     font-size: 1.2rem;
-    background-color: rgb(101, 181, 61);
+    background-color: rgba(189, 14, 14, 0.709);
+    ;
     margin-top: 1rem;
+    transition: 0.5s;
+}
+
+.AuthPage .btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0.9);
 }
