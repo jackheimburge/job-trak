@@ -55,7 +55,7 @@ export default function TableRow({ job, num, setJobs }) {
                     : (
                         <span>{job.status}</span>
                     )}</td>
-            <td>
+            <td id='td-title'>
                 {job.title}
             </td>
             <td>{job.company}</td>

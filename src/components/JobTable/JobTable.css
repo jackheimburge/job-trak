@@ -5,6 +5,11 @@
     border-collapse: collapse;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+.JobTable tbody tr td:nth-child(2n-1) {
+    font-weight: bold;
 }
 
 .JobTable thead tr {
@@ -45,5 +50,8 @@
 
 .JobTable button {
     border: none;
+}
+
+.JobTable th {
     font-size: 1.1rem;
 }
