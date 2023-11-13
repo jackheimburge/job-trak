@@ -40,9 +40,9 @@ export default function JobTable({ jobs, setJobs }) {
                         <th>Company</th>
                         <th>Type</th>
                         <th>Location</th>
-                        <th onClick={handleSalaryClick}>Salary</th>
+                        <th onClick={handleSalaryClick}>Salary<button>{sortOrder === 'asc' ? '↓' : '↑'}</button></th>
                         <th>URL</th>
-                        <th onClick={handleSuitabilityClick}>Suitability</th>
+                        <th onClick={handleSuitabilityClick}>Suitability<button>{sortOrder === 'asc' ? '↓' : '↑'}</button></th>
                         <th></th>
                     </tr>
                 </thead>

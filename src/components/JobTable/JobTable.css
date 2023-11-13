@@ -42,3 +42,8 @@
 .JobTable select {
     max-width: 6rem;
 }
+
+.JobTable button {
+    border: none;
+    font-size: 1.1rem;
+}
