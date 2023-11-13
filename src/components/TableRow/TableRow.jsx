@@ -42,7 +42,7 @@ export default function TableRow({ job, num, setJobs }) {
             <td>{`${parts[1]}-${parts[2]}-${parts[0]}`}</td>
             <td className={status} onClick={handleClick} >
                 {isEditing ? (
-                    <select onChange={handleChange} onBlur={handleSave} name="status" id="status">
+                    <select onChange={handleChange} onBlur={handleSave} name="status" id="status" value={job.status}>
                         <option value="Applied">--Select--</option>
                         <option value="Applied">Applied</option>
                         <option value="Yet to Apply">Yet to Apply</option>
@@ -55,7 +55,9 @@ export default function TableRow({ job, num, setJobs }) {
                     : (
                         <span>{job.status}</span>
                     )}</td>
-            <td>{job.title}</td>
+            <td>
+                {job.title}
+            </td>
             <td>{job.company}</td>
             <td>{job.type}</td>
             <td>{job.location}</td>

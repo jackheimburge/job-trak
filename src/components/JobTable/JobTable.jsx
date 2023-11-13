@@ -4,6 +4,10 @@ import './JobTable.css';
 
 
 export default function JobTable({ jobs, setJobs }) {
+    function handleSalaryClick() {
+        const sortedJobs = [...jobs].sort((a, b) => a.salary - b.salary);
+        setJobs(sortedJobs);
+    }
     return (
         <div className='TableDiv'>
             <table className='JobTable'>
@@ -16,7 +20,7 @@ export default function JobTable({ jobs, setJobs }) {
                         <th>Company</th>
                         <th>Type</th>
                         <th>Location</th>
-                        <th>Salary</th>
+                        <th onClick={handleSalaryClick}>Salary</th>
                         <th>URL</th>
                         <th>Suitability</th>
                         <th></th>
