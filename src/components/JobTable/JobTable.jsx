@@ -8,6 +8,8 @@ export default function JobTable({ jobs, setJobs }) {
     const [sortSalaryOrder, setSalarySortOrder] = useState('asc');
     const [sortSuitOrder, setSortSuitOrder] = useState('asc');
     const [sortDateOrder, setDateOrder] = useState('asc');
+    const [sortStatusOrder, setSortStatusOrder] = useState('asc');
+    const [sortTypeOrder, setSortTypeOrder] = useState('asc');
     function handleSalaryClick() {
         const sortedJobs = [...jobs].sort((a, b) => {
             if (sortSalaryOrder === 'asc') {
@@ -43,6 +45,31 @@ export default function JobTable({ jobs, setJobs }) {
         setJobs(sortedJobs);
         setDateOrder(sortDateOrder === 'asc' ? 'desc' : 'asc');
     }
+
+    function handleStatusClick() {
+        const sortedJobs = [...jobs].sort((a, b) => {
+            if (sortStatusOrder === 'asc') {
+                return a.status.localeCompare(b.status);
+            } else {
+                return b.status.localeCompare(a.status)
+            }
+        });
+        setJobs(sortedJobs);
+        setSortStatusOrder(sortStatusOrder === 'asc' ? 'desc' : 'asc');
+    }
+
+    function handleTypeClick() {
+        const sortedJobs = [...jobs].sort((a, b) => {
+            if (sortTypeOrder === 'asc') {
+                return a.type.localeCompare(b.type);
+            } else {
+                return b.type.localeCompare(a.type)
+            }
+        });
+        setJobs(sortedJobs);
+        setSortTypeOrder(sortStatusOrder === 'asc' ? 'desc' : 'asc');
+    }
+
     return (
         <div className='TableDiv'>
             <table className='JobTable'>
@@ -50,10 +77,10 @@ export default function JobTable({ jobs, setJobs }) {
                     <tr>
                         <th id='NumTH'>#</th>
                         <th onClick={handleDateClick}>Date<button>{sortDateOrder === 'asc' ? '↑' : '↓'}</button></th>
-                        <th>Status</th>
+                        <th onClick={handleStatusClick}>Status<button>{sortStatusOrder === 'asc' ? '↑' : '↓'}</button></th>
                         <th>Title</th>
                         <th>Company</th>
-                        <th>Type</th>
+                        <th onClick={handleTypeClick}>Type<button>{sortTypeOrder === 'asc' ? '↑' : '↓'}</button></th>
                         <th>Location</th>
                         <th onClick={handleSalaryClick}>Salary<button>{sortSalaryOrder === 'asc' ? '↑' : '↓'}</button></th>
                         <th>URL</th>
