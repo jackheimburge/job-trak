@@ -5,28 +5,29 @@ import './JobTable.css';
 
 
 export default function JobTable({ jobs, setJobs }) {
-    const [sortOrder, setSortOrder] = useState('asc');
+    const [sortSalaryOrder, setSalarySortOrder] = useState('asc');
+    const [sortSuitOrder, setSortSuitOrder] = useState('asc');
     function handleSalaryClick() {
         const sortedJobs = [...jobs].sort((a, b) => {
-            if (sortOrder === 'asc') {
+            if (sortSalaryOrder === 'asc') {
                 return a.salary - b.salary;
             } else {
                 return b.salary - a.salary;
             }
         });
         setJobs(sortedJobs);
-        setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+        setSalarySortOrder(sortSalaryOrder === 'asc' ? 'desc' : 'asc');
     }
     function handleSuitabilityClick() {
         const sortedJobs = [...jobs].sort((a, b) => {
-            if (sortOrder === 'asc') {
+            if (sortSuitOrder === 'asc') {
                 return a.suitability - b.suitability;
             } else {
                 return b.suitability - a.suitability;
             }
         });
         setJobs(sortedJobs);
-        setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+        setSortSuitOrder(sortSuitOrder === 'asc' ? 'desc' : 'asc');
     }
     return (
         <div className='TableDiv'>
@@ -40,9 +41,9 @@ export default function JobTable({ jobs, setJobs }) {
                         <th>Company</th>
                         <th>Type</th>
                         <th>Location</th>
-                        <th onClick={handleSalaryClick}>Salary<button>{sortOrder === 'asc' ? '↓' : '↑'}</button></th>
+                        <th onClick={handleSalaryClick}>Salary<button>{sortSalaryOrder === 'asc' ? '↓' : '↑'}</button></th>
                         <th>URL</th>
-                        <th onClick={handleSuitabilityClick}>Suitability<button>{sortOrder === 'asc' ? '↓' : '↑'}</button></th>
+                        <th onClick={handleSuitabilityClick}>Suitability<button>{sortSuitOrder === 'asc' ? '↓' : '↑'}</button></th>
                         <th></th>
                     </tr>
                 </thead>
