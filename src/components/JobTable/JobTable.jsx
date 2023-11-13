@@ -7,6 +7,7 @@ import './JobTable.css';
 export default function JobTable({ jobs, setJobs }) {
     const [sortSalaryOrder, setSalarySortOrder] = useState('asc');
     const [sortSuitOrder, setSortSuitOrder] = useState('asc');
+    const [sortDateOrder, setDateOrder] = useState('asc');
     function handleSalaryClick() {
         const sortedJobs = [...jobs].sort((a, b) => {
             if (sortSalaryOrder === 'asc') {
@@ -18,6 +19,7 @@ export default function JobTable({ jobs, setJobs }) {
         setJobs(sortedJobs);
         setSalarySortOrder(sortSalaryOrder === 'asc' ? 'desc' : 'asc');
     }
+
     function handleSuitabilityClick() {
         const sortedJobs = [...jobs].sort((a, b) => {
             if (sortSuitOrder === 'asc') {
@@ -29,13 +31,25 @@ export default function JobTable({ jobs, setJobs }) {
         setJobs(sortedJobs);
         setSortSuitOrder(sortSuitOrder === 'asc' ? 'desc' : 'asc');
     }
+
+    function handleDateClick() {
+        const sortedJobs = [...jobs].sort((a, b) => {
+            if (sortDateOrder === 'asc') {
+                return new Date(a.date) - new Date(b.date);
+            } else {
+                return new Date(b.date) - new Date(a.date);
+            }
+        });
+        setJobs(sortedJobs);
+        setDateOrder(sortDateOrder === 'asc' ? 'desc' : 'asc');
+    }
     return (
         <div className='TableDiv'>
             <table className='JobTable'>
                 <thead>
                     <tr>
                         <th id='NumTH'>#</th>
-                        <th>Date</th>
+                        <th onClick={handleDateClick}>Date<button>{sortDateOrder === 'asc' ? '↑' : '↓'}</button></th>
                         <th>Status</th>
                         <th>Title</th>
                         <th>Company</th>
