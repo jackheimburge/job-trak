@@ -1,17 +1,9 @@
 import JobTable from '../../components/JobTable/JobTable';
 import * as jobsAPI from '../../utilities/jobs-api';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import './IndexPage.css';
 
-export default function IndexPage({ user }) {
-    const [jobs, setJobs] = useState([]);
-    useEffect(function () {
-        async function getJobs() {
-            const allJobs = await jobsAPI.getJobs();
-            setJobs(allJobs);
-        }
-        getJobs();
-    }, [setJobs, user]);
+export default function IndexPage({ jobs, setJobs }) {
 
     return (
         <div className='IndexPage'>
