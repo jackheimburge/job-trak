@@ -91,9 +91,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
                         <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                     </select>
                 </td>
-                <td><button style={{
-
-                }} onClick={handleSubmit} disabled={isUploading}>+</button></td>
+                <td><button onClick={handleSubmit} disabled={isUploading}>+</button></td>
             </tr>
         </>
     );

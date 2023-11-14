@@ -48,7 +48,7 @@
     max-width: 6rem;
 }
 
-.JobTable button {
+.JobTable th button {
     border: none;
     background: none;
 }

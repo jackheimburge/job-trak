@@ -5,7 +5,8 @@ select {
 
 .NewEntryRow button {
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: 20px;
+    background-color: rgba(189, 14, 14, 0.709);
 }
