@@ -24,6 +24,11 @@ export default function TableRow({ job, num, setJobs }) {
         setIsEditing(false);
     }
 
+    async function handleDelete() {
+        const updatedJobs = await jobsAPI.deleteJob(job._id);
+        setJobs(updatedJobs);
+    }
+
     const dateParts = job.date.split('T')
     const parts = dateParts[0].split('-');
     let status = '';
@@ -67,6 +72,9 @@ export default function TableRow({ job, num, setJobs }) {
                 {Array.from({ length: job.suitability }, (_, index) => (
                     <span key={index}>⭐️</span>
                 ))}
+            </td>
+            <td>
+                <button onClick={handleDelete} className='delete-btn'>x</button>
             </td>
         </tr>
     );

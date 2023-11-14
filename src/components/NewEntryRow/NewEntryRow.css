@@ -1,3 +1,8 @@
+.NewEntryRow {
+    border: none;
+    padding: 10rem;
+}
+
 .NewEntryRow input,
 select {
     border-radius: 10px;
@@ -7,6 +12,8 @@ select {
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    margin: 20px;
-    background-color: rgba(189, 14, 14, 0.709);
+    font-size: 1.5rem;
+    padding: 0;
+    background-color: green;
+    margin: 0 1rem;
 }

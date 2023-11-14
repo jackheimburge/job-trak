@@ -12,3 +12,7 @@ export function getJobs() {
 export function update(job) {
     return sendRequest(`${BASE_URL}/${job._id}/edit`, 'PUT', job);
 }
+
+export function deleteJob(jobId) {
+    return sendRequest(`${BASE_URL}/${jobId}/delete`, 'DELETE');
+}

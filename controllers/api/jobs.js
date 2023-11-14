@@ -3,7 +3,8 @@ const Job = require('../../models/job');
 module.exports = {
     add,
     getAll,
-    update
+    update,
+    deleteJob
 }
 
 async function add(req, res) {
@@ -21,4 +22,10 @@ async function update(req, res) {
     await Job.findByIdAndUpdate(req.params.id, req.body);
     const allJobs = await Job.find({ user: req.user._id });
     res.json(allJobs);
+}
+
+async function deleteJob(req, res) {
+    await Job.findByIdAndDelete(req.params.id);
+    const updatedjobs = await Job.find({ user: req.user._id });
+    res.json(updatedjobs);
 }

@@ -10,5 +10,7 @@ router.get('/', ensureLoggedIn, jobsCtrl.getAll);
 router.post('/', ensureLoggedIn, jobsCtrl.add);
 //PUT '/api/jobs/:id/edit
 router.put('/:id/edit', ensureLoggedIn, jobsCtrl.update)
+//DELETE '/api/jobs/:id/edit'
+router.delete('/:id/delete', ensureLoggedIn, jobsCtrl.deleteJob);
 
 module.exports = router;
