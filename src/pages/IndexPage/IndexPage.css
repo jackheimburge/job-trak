@@ -8,10 +8,6 @@
     grid-column: span 2;
 }
 
-.IndexPage button {
-    background-color: #009879;
-}
-
 @media (max-width: 770px) {
     .IndexPage {
         grid-template-rows: 7fr 1fr;

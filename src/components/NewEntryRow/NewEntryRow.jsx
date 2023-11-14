@@ -86,7 +86,7 @@ export default function NewEntryRow({ setJobs, jobs }) {
                     <select onChange={handleChange} name="suitability" id="suitability">
                         <option value="1">⭐️</option>
                         <option value="2">⭐️⭐️</option>
-                        <option value="3">⭐️⭐️⭐️</option>
+                        <option selected value="3">⭐️⭐️⭐️</option>
                         <option value="4">⭐️⭐️⭐️⭐️</option>
                         <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                     </select>

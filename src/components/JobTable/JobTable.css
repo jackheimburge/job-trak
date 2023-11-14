@@ -13,7 +13,7 @@
 }
 
 .JobTable thead tr {
-    background-color: #009879;
+    background-color: rgba(189, 14, 14, 0.709);
     color: #ffffff;
 }
 
@@ -50,8 +50,5 @@
 
 .JobTable button {
     border: none;
-}
-
-.JobTable th {
-    font-size: 1.05rem;
+    background: none;
 }
