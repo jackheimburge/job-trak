@@ -19,6 +19,6 @@ async function getAll(req, res) {
 
 async function update(req, res) {
     await Job.findByIdAndUpdate(req.params.id, req.body);
-    const allJobs = await Job.find({});
+    const allJobs = await Job.find({ user: req.user._id });
     res.json(allJobs);
 }
