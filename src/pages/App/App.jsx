@@ -14,8 +14,10 @@ export default function App() {
   const [jobs, setJobs] = useState([]);
   useEffect(function () {
     async function getJobs() {
-      const allJobs = await jobsAPI.getJobs();
-      setJobs(allJobs);
+      if (user) {
+        const allJobs = await jobsAPI.getJobs();
+        setJobs(allJobs);
+      }
     }
     getJobs();
   }, [setJobs, user]);
