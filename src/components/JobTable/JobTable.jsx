@@ -67,7 +67,7 @@ export default function JobTable({ jobs, setJobs }) {
             }
         });
         setJobs(sortedJobs);
-        setSortTypeOrder(sortStatusOrder === 'asc' ? 'desc' : 'asc');
+        setSortTypeOrder(sortTypeOrder === 'asc' ? 'desc' : 'asc');
     }
 
     return (

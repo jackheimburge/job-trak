@@ -1,9 +1,11 @@
 nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
     position: relative;
-    display: inline-block;
-    align-items: flex-end;
-    margin-left: 0;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 nav span {
@@ -15,10 +17,11 @@ nav span {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    width: 15rem;
 }
 
 .dropdown-content a {
@@ -30,4 +33,8 @@ nav span {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+}
+
+.arrow {
+    font-size: 2rem;
 }
