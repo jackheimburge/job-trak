@@ -30,7 +30,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/" element={<IndexPage jobs={jobs} setJobs={setJobs} />} />
-            <Route path="/dashboard" element={<DashboardPage user={user} jobs={jobs} setJobs={setJobs} />} />
+            <Route path="/dashboard" element={<DashboardPage user={user} jobs={jobs} />} />
           </Routes>
         </>
         :
