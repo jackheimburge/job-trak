@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-  <img src="https://i.imgur.com/LfL2Oth.png" width="800" alt="cardhub  logo"  style="max-height: 200px; object-fit: cover;">
+  <img src="https://i.imgur.com/HKziD1u.png" width="800" alt="cardhub  logo"  style="max-height: 200px; object-fit: cover;">
 
 </div>
 
