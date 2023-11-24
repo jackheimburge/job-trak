@@ -1,12 +1,11 @@
 <div id="header" align="center">
 
-  <img src="https://i.imgur.com/HKziD1u.png" width="800" alt="cardhub  logo"  style="max-height: 200px; object-fit: cover;">
-
+  <img src="https://i.imgur.com/HKziD1u.png" width="800" alt="cardhub  logo"  style="max-height: 200px; max-width: 200px;">
+<h3>Where Job Searching Meets Simplicity</h3>
 </div>
 
 <div align="center" id="header">
    
-# App Trak 
  
 [Jack Heimburge](https://www.linkedin.com/in/jackheimburge/)
 #### [View Site](https://app-trakk-4b69c26873f1.herokuapp.com/) 
