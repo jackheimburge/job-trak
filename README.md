@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-  <img src="https://i.imgur.com/HKziD1u.png" width="800" alt="cardhub  logo"  style="max-height: 200px; max-width: 200px;">
+  <img src="https://i.imgur.com/HKziD1u.png" alt="cardhub  logo" >
 <h3>Where Job Searching Meets Simplicity</h3>
 </div>
 
