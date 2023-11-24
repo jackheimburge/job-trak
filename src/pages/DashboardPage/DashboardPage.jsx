@@ -4,7 +4,7 @@ import './DashboardPage.css';
 
 export default function DashboardPage({ jobs }) {
     const curMonth = new Date().getUTCMonth() + 1;
-    const jobsThisMonth = jobs.filter((job) => {
+    const jobsCurMonth = jobs.filter((job) => {
         // Assuming job.date is a string in the format 'YYYY-MM-DDTHH:mm:ss.sssZ'
         const jobMonth = new Date(job.date).getUTCMonth() + 1; // Extract month part from the timestamp
 
@@ -15,7 +15,7 @@ export default function DashboardPage({ jobs }) {
         <div className="DashboardPage">
             <div>Total jobs Applied: {jobs.length}</div>
             <div>Total jobs Rejected: {jobs.filter((job) => job.status === 'Rejected').length}</div>
-            <div>Total jobs Applied to this month: {jobsThisMonth.length}</div>
+            <div>Total jobs Applied to this month: {jobsCurMonth.length}</div>
         </div>
 
     );
