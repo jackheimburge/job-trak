@@ -38,7 +38,7 @@ App Trak is your dedicated companion on the journey to securing your dream job. 
 |------------ | ------------|
 | <h3 align="center">Login Page</h3> | <img src="https://i.imgur.com/N4yENRV.png">
 | <h3 align="center">Main Page</h3> | <img src="https://i.imgur.com/TrjwGJX.png">
-| <h3 align="center">Add a new Application</h3> | <img src="">
+| <h3 align="center">Edit Application Status</h3> | <img src="https://i.imgur.com/9e6It3q.png">
 | <h3 align="center">Dashboard</h3> | <img src="">
 
 # Technologies Used
