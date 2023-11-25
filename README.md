@@ -36,8 +36,8 @@ App Trak is your dedicated companion on the journey to securing your dream job. 
 # Screenshots
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Login Page</h3> | <img src="">
-| <h3 align="center">Application Table</h3> | <img src="">
+| <h3 align="center">Login Page</h3> | <img src="https://i.imgur.com/N4yENRV.png">
+| <h3 align="center">Main Page</h3> | <img src="https://i.imgur.com/TrjwGJX.png">
 | <h3 align="center">Add a new Application</h3> | <img src="">
 | <h3 align="center">Dashboard</h3> | <img src="">
 
