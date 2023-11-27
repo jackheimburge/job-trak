@@ -6,8 +6,10 @@ export default function DashboardPage({ jobs }) {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const curYear = new Date().getUTCFullYear();
     const jobsCurMonth = jobs.filter((job) => {
-        const jobMonth = new Date(job.date).getUTCMonth() + 1;
-        return !isNaN(jobMonth) && jobMonth === curMonth;
+        const jobDate = new Date(job.date);
+        const jobYear = jobDate.getUTCFullYear();
+        const jobMonth = jobDate.getUTCMonth() + 1;
+        return !isNaN(jobYear) && !isNaN(jobMonth) && jobYear === curYear && jobMonth === curMonth;
     });
     const jobsCurYear = jobs.filter((job) => {
         const jobYear = new Date(job.date).getUTCFullYear();
