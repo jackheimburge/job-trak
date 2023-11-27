@@ -24,19 +24,19 @@
 }
 
 .JobTable .red {
-    background-color: red;
+    background-color: #D83F31;
 }
 
 .JobTable .yellow {
-    background-color: yellow;
+    background-color: #F4CE14;
 }
 
 .JobTable .blue {
-    background-color: #39A7FF;
+    background-color: #3AA6B9;
 }
 
 .JobTable .green {
-    background-color: #A6FF96;
+    background-color: #219C90;
 }
 
 .JobTable input {

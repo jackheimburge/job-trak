@@ -9,11 +9,11 @@ select {
 }
 
 .NewEntryRow button {
-    border-radius: 50%;
+    border-radius: 45%;
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.5rem;
     padding: 0;
-    background-color: green;
+    background-color: #219C90;
     margin: 0 1rem;
 }
