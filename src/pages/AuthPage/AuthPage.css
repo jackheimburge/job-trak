@@ -43,17 +43,17 @@
 .AuthPage .btn-success {
     border: none;
     font-size: 1.5rem;
-    background-color: black;
+    background-color: #2B3499;
 }
 
 .AuthPage .btn-success:hover {
-    background-color: rgba(189, 14, 14, 0.709);
+    background-color: rgb(210, 95, 38);
 }
 
 .AuthPage .btn-primary {
     border: none;
     font-size: 1.2rem;
-    background-color: rgba(189, 14, 14, 0.709);
+    background-color: #2B3499;
     ;
     margin-top: 1rem;
     transition: 0.5s;
