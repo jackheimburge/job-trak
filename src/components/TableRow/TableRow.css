@@ -22,4 +22,15 @@
 .TableRow .status {
     text-align: center;
     font-size: 0.8rem;
+    cursor: pointer;
+}
+
+#NumTD {
+    padding: 0 0.8rem;
+    font-size: 0.8rem;
+}
+
+
+#dateTD {
+    font-size: 0.9rem;
 }
