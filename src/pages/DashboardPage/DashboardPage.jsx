@@ -1,9 +1,9 @@
 
-import AnalyticsChart from '../../components/AnalyticsChart/AnalyticsChart';
 import './DashboardPage.css';
 
 export default function DashboardPage({ jobs }) {
     const curMonth = new Date().getUTCMonth() + 1;
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const curYear = new Date().getUTCFullYear();
     const jobsCurMonth = jobs.filter((job) => {
         const jobMonth = new Date(job.date).getUTCMonth() + 1;
@@ -17,8 +17,9 @@ export default function DashboardPage({ jobs }) {
 
     return (
         <div className="DashboardPage">
-            <div>Total jobs Applied: {jobs.length}</div>
-            <div>Total jobs Rejected: {jobs.filter((job) => job.status === 'Rejected').length}</div>
+            <h1>Analytics for {months[curMonth - 1]},&nbsp; {curYear}</h1>
+            <div>Total jobs Applied to: {jobs.length}</div>
+            <div>Total Rejections: {jobs.filter((job) => job.status === 'Rejected').length}</div>
             <div>Total jobs Applied to this month: {jobsCurMonth.length}</div>
             <div>Total jobs Applied to this year: {jobsCurYear.length}</div>
         </div>
