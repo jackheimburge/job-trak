@@ -16,9 +16,9 @@ export default function NavBar({ user, setUser }) {
 
     return (
         <nav>
-            <span onClick={toggleDropdown}>Welcome, {user.name}<span className='arrow'> &#8691;</span></span>
+            <span onClick={toggleDropdown}>Welcome, {user.name}<span className='arrow'> &#8595;</span></span>
             {dropdownIsActive && (
-                <div className='dropdown-content' onClick={() => setDropdownIsActive(false)}>
+                <div className='dropdown-content' onMouseLeave={() => setDropdownIsActive(false)} onClick={() => setDropdownIsActive(false)}>
                     <Link to={'/'}>Jobs </Link>
                     <Link to="/dashboard" >My Dashboard</Link>
                     <Link to="" onClick={handleLogOut}>Log Out</Link>
