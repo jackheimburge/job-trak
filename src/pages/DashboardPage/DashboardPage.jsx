@@ -11,6 +11,7 @@ export default function DashboardPage({ jobs }) {
         const jobMonth = jobDate.getUTCMonth() + 1;
         return !isNaN(jobYear) && !isNaN(jobMonth) && jobYear === curYear && jobMonth === curMonth;
     });
+
     const jobsCurYear = jobs.filter((job) => {
         const jobYear = new Date(job.date).getUTCFullYear();
         return !isNaN(jobYear) && jobYear === curYear;
@@ -19,11 +20,17 @@ export default function DashboardPage({ jobs }) {
 
     return (
         <div className="DashboardPage">
-            <h1>Analytics for {months[curMonth - 1]},&nbsp; {curYear}</h1>
-            <div>Total jobs Applied to: {jobs.length}</div>
-            <div>Total Rejections: {jobs.filter((job) => job.status === 'Rejected').length}</div>
-            <div>Total jobs Applied to this month: {jobsCurMonth.length}</div>
-            <div>Total jobs Applied to this year: {jobsCurYear.length}</div>
+            <div className='curMonth'>
+                <h2>Analytics for {months[curMonth - 1]},&nbsp; {curYear}</h2>
+                <div>Applications: {jobsCurMonth.length}</div>
+                <div>Rejections: {jobsCurMonth.filter((job) => job.status === 'Rejected').length}</div>
+            </div>
+
+            <div className="total">
+                <h2>Overall Analytics</h2>
+                <div>Applications this Year: {jobsCurYear.length}</div>
+                <div>Total Applications: {jobs.length}</div>
+            </div>
         </div>
 
     );
