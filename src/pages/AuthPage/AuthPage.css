@@ -53,9 +53,14 @@
 .AuthPage .btn-primary {
     border: none;
     font-size: 1.2rem;
-    background-color: #2B3499;
+    background-color: #1D5B79;
     margin-top: 1rem;
     transition: 0.5s;
+    padding: 0.8rem;
+}
+
+.AuthPage .btn-primary:hover {
+    background-color: #134a66;
 }
 
 .AuthPage img {

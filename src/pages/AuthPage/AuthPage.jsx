@@ -11,9 +11,9 @@ export default function AuthPage({ setUser }) {
             <div className="auth-left"><img src="https://i.imgur.com/HKziD1u.png" alt="" /></div>
             <div className="auth-right">
                 <h1>Welcome to App Trak!</h1>
-                <h3>Your Job Search Companion</h3>
+                <h3>Your Job Search Companion.</h3>
                 {showSignUpForm ? <SignUpForm setUser={setUser} /> : <LoginForm setUser={setUser} />}
-                <button className="btn btn-primary" onClick={() => setShowSignUpForm(!showSignUpForm)}>{showSignUpForm ? 'Already have an account? Sign in' : 'Create an Account'}</button>
+                <button className="btn btn-primary" onClick={() => setShowSignUpForm(!showSignUpForm)}>{showSignUpForm ? 'Already have an account? Sign In' : 'Create New Account'}</button>
             </div>
         </main>
     );
