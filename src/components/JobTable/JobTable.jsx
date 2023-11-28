@@ -93,7 +93,10 @@ export default function JobTable({ jobs, setJobs }) {
                     <NewEntryRow setJobs={setJobs} jobs={jobs} />
                 </tbody>
             </table>
-            {!jobs.length && <h5>No Job Applications Yet! Start by Adding a Job Above!</h5>}
+            {!jobs.length ? <h5>No Job Applications Yet! Start by Adding a Job Above!</h5>
+                :
+                <p>*Click the Current Status to Edit Status of Job Application </p>
+            }
         </div>
     );
 }
