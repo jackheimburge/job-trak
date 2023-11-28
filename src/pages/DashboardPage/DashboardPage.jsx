@@ -28,8 +28,8 @@ export default function DashboardPage({ jobs }) {
 
             <div className="total">
                 <h2>Overall Analytics</h2>
-                <div>Applications this Year: {jobsCurYear.length}</div>
-                <div>Total Applications: {jobs.length}</div>
+                <div>Applications This Year: {jobsCurYear.length}</div>
+                <div>All Time Applications: {jobs.length}</div>
             </div>
         </div>
 
