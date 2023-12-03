@@ -52,7 +52,7 @@ export default function TableRow({ job, num, setJobs }) {
             <td id='dateTD'>{`${parts[1]}-${parts[2]}-${parts[0]}`}</td>
             <td className={`${status} status`} onClick={handleClick}>
                 {isEditing ? (
-                    <select onChange={handleChange} onMouseLeave={handleSave} name="status" id="status">
+                    <select onChange={handleChange} onMouseLeave={handleSave} value={job.status} name="status" id="status">
                         <option value="Applied">--Select--</option>
                         <option value="Applied">Applied</option>
                         <option value="Yet to Apply">Yet to Apply</option>
