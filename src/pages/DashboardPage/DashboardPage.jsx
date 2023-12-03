@@ -46,7 +46,7 @@ export default function DashboardPage({ jobs }) {
             <div className='prevMonth'>
                 <h2>Analytics for {months[curMonth - 2]},&nbsp; {curYear}</h2>
                 <div>Applications: {jobsPrevMonth.length}</div>
-                <div>Rejections: {jobsCurMonth.filter((job) => job.status === 'Rejected').length}</div>
+                <div>Rejections: {jobsPrevMonth.filter((job) => job.status === 'Rejected').length}</div>
             </div>
             <div className="total">
                 <h2>Overall Stats</h2>
