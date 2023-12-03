@@ -21,6 +21,7 @@ export default function TableRow({ job, num, setJobs }) {
 
     async function handleSave() {
         if (!isChanged) {
+            setIsEditing(false);
             return;
         }
         try {
