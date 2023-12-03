@@ -5,12 +5,13 @@ import './TableRow.css'
 export default function TableRow({ job, num, setJobs }) {
     const [isEditing, setIsEditing] = useState(false);
     const [updatedJob, setUpdatedJob] = useState([]);
-
+    const [isChanged, setIsChanged] = useState(false);
     async function handleClick() {
         setIsEditing(true);
     }
 
     async function handleChange(e) {
+        setIsChanged(true);
         setUpdatedJob({
             ...job,
             [e.target.name]: e.target.value
@@ -19,6 +20,9 @@ export default function TableRow({ job, num, setJobs }) {
     }
 
     async function handleSave() {
+        if (!isChanged) {
+            return;
+        }
         try {
             const updatedJobs = await jobsAPI.update(updatedJob);
             setJobs(updatedJobs);
