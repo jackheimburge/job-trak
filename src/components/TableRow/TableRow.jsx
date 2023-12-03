@@ -19,9 +19,14 @@ export default function TableRow({ job, num, setJobs }) {
     }
 
     async function handleSave() {
-        const updatedJobs = await jobsAPI.update(updatedJob);
-        setJobs(updatedJobs);
-        setIsEditing(false);
+        try {
+            const updatedJobs = await jobsAPI.update(updatedJob);
+            setJobs(updatedJobs);
+            setIsEditing(false);
+        }
+        catch (err) {
+            console.log(err);
+        }
     }
 
     async function handleDelete() {
