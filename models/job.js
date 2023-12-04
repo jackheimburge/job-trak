@@ -4,10 +4,12 @@ const Schema = mongoose.Schema;
 const jobSchema = new Schema({
     date: {
         type: Date,
+        default: Date.now
     },
     status: {
         type: String,
         enum: ['Yet to Apply', 'Applied', 'Interview Scheduled', 'Currently Interviewing', 'Rejected', 'Offer Received'],
+        default: 'Applied'
     },
     title: {
         type: String,
@@ -17,7 +19,8 @@ const jobSchema = new Schema({
     },
     type: {
         type: String,
-        enum: ['Hybrid', 'Office', 'Remote']
+        enum: ['Hybrid', 'Office', 'Remote'],
+        default: 'Office'
     },
     salary: {
         type: Number,
@@ -30,7 +33,8 @@ const jobSchema = new Schema({
     },
     suitability: {
         type: String,
-        enum: [1, 2, 3, 4, 5]
+        enum: [1, 2, 3, 4, 5],
+        default: 3
     },
     user: {
         type: Schema.Types.ObjectId,
