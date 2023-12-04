@@ -8,7 +8,6 @@ const jobSchema = new Schema({
     status: {
         type: String,
         enum: ['Yet to Apply', 'Applied', 'Interview Scheduled', 'Currently Interviewing', 'Rejected', 'Offer Received'],
-        default: 'Applied'
     },
     title: {
         type: String,
@@ -18,8 +17,7 @@ const jobSchema = new Schema({
     },
     type: {
         type: String,
-        enum: ['Hybrid', 'Office', 'Remote'],
-        default: 'Office'
+        enum: ['Hybrid', 'Office', 'Remote']
     },
     salary: {
         type: Number,
@@ -32,8 +30,7 @@ const jobSchema = new Schema({
     },
     suitability: {
         type: String,
-        enum: [1, 2, 3, 4, 5],
-        default: 3
+        enum: [1, 2, 3, 4, 5]
     },
     user: {
         type: Schema.Types.ObjectId,
