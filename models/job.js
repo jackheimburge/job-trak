@@ -4,12 +4,10 @@ const Schema = mongoose.Schema;
 const jobSchema = new Schema({
     date: {
         type: Date,
-        required: true
     },
     status: {
         type: String,
         enum: ['Yet to Apply', 'Applied', 'Interview Scheduled', 'Currently Interviewing', 'Rejected', 'Offer Received'],
-        required: true
     },
     title: {
         type: String,
