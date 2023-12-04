@@ -8,20 +8,9 @@
     grid-column: span 2;
 }
 
-@media (max-width: 770px) {
-    .IndexPage {
-        grid-template-rows: 7fr 1fr;
-    }
-}
-
-@media (max-width: 430px) {
-    .IndexPage {
-        grid-template-rows: 6fr 1fr;
-    }
-
-    .IndexPage button {
-        height: 6rem;
-        width: 6rem;
-        margin-bottom: 1rem;
+@media only screen and (max-width: 428px) {
+    .IndexPage .JobTable {
+        transform: scale(0.5);
+        transform-origin: top left;
     }
 }
