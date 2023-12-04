@@ -36,10 +36,10 @@ App Trak is your dedicated companion on the journey to securing your dream job. 
 # Screenshots
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Login Page</h3> | <img src="https://i.imgur.com/N4yENRV.png">
+| <h3 align="center">Login Page</h3> | <img src="https://i.imgur.com/MCMYOOB.png">
 | <h3 align="center">Main Page</h3> | <img src="https://i.imgur.com/TrjwGJX.png">
 | <h3 align="center">Edit Application Status</h3> | <img src="https://i.imgur.com/9e6It3q.png">
-| <h3 align="center">Dashboard</h3> | <img src="">
+| <h3 align="center">Dashboard</h3> | <img src="https://i.imgur.com/T4mX8TF.png">
 
 # Technologies Used
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -50,9 +50,9 @@ App Trak is your dedicated companion on the journey to securing your dream job. 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
-
+<!-- 
 # Next Steps
 
 <!-- - [ ] Storefront
 - [ ] Messaging
-- [ ] Order History -->
+- [ ] Order History --> -->
