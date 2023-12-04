@@ -25,20 +25,25 @@ export default function NewEntryRow({ setJobs, jobs }) {
     async function handleSubmit(e) {
         e.preventDefault();
         setIsUploading(true);
-        const addedJob = await jobsAPI.add(job);
-        setJobs([...jobs, addedJob]);
-        setJob({
-            date: '',
-            status: 'Applied',
-            title: '',
-            company: '',
-            type: 'Office',
-            location: '',
-            salary: '',
-            url: '',
-            suitability: 3
-        });
-        setIsUploading(false);
+        try {
+            const jobToSend = Object.fromEntries(Object.entries(job).filter(([key, value]) => value !== ''));
+            const addedJob = await jobsAPI.add(jobToSend);
+            setJobs([...jobs, addedJob]);
+            setJob({
+                date: '',
+                status: 'Applied',
+                title: '',
+                company: '',
+                type: 'Office',
+                location: '',
+                salary: 50000,
+                url: '',
+                suitability: 3
+            });
+            setIsUploading(false);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
