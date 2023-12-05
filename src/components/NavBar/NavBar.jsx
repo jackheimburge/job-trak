@@ -17,7 +17,7 @@ export default function NavBar({ user, setUser }) {
     return (
         <nav>
             <Link to={"/"}><img src="https://i.imgur.com/HKziD1u.png" alt="" /></Link>
-            <span onClick={toggleDropdown}><span className='welcome'>Welcome, {user.name}</span><span className='arrow'> &#8595;</span></span>
+            <span onClick={toggleDropdown}><span className='welcome'>Welcome, {user.name.split(' ')[0]}</span><span className='arrow'> &#8595;</span></span>
             {dropdownIsActive && (
                 <div className='dropdown-content' onMouseLeave={() => setDropdownIsActive(false)} onClick={() => setDropdownIsActive(false)}>
                     <Link to={'/'}>Home </Link>
