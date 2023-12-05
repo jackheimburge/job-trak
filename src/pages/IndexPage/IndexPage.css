@@ -8,7 +8,7 @@
     grid-column: span 2;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 450px) {
     .IndexPage .JobTable {
         transform: scale(0.5);
         transform-origin: top left;

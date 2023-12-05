@@ -73,7 +73,7 @@
     margin: 1.2rem 0;
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 450px) {
     .AuthPage {
         grid-template-columns: 1fr;
     }
