@@ -8,7 +8,7 @@ export default function AuthPage({ setUser }) {
 
     return (
         <main className="AuthPage">
-            <div className="auth-left"><img src="https://i.imgur.com/HKziD1u.png" alt="" /></div>
+            {/* <div className="auth-left"><img src="https://i.imgur.com/HKziD1u.png" alt="" /></div> */}
             <div className="auth-right">
                 <h1>Welcome to App Trak!</h1>
                 <h3>Your Job Search Companion.</h3>
