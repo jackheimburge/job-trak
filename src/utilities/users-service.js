@@ -31,7 +31,7 @@ export function getToken() {
     return token;
 }
 
-export function checkToken() {
+export async function checkToken() {
     return usersAPI.checkToken()
         .then(dateStr => new Date(dateStr));
 }

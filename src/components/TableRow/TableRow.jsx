@@ -76,7 +76,7 @@ export default function TableRow({ job, num, setJobs }) {
             <td>{job.type}</td>
             <td>{job.location}</td>
             <td>${job.salary}</td>
-            <td><a target="_blank" rel="noreferrer" href={job.url}>{job.url.substring(0, 20) + '...'}</a></td>
+            <td><a target="_blank" rel="noreferrer nofollow" href={job.url}>{job.url.substring(0, 20) + '...'}</a></td>
             <td>
                 {Array.from({ length: job.suitability }, (_, index) => (
                     <span key={index}>⭐️</span>
