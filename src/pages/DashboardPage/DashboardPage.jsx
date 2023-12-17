@@ -42,6 +42,8 @@ export default function DashboardPage({ jobs }) {
                 <h2>Analytics for {months[curMonth - 1]},&nbsp; {curYear}</h2>
                 <div>Applications: {jobsCurMonth.length} <span style={{ color: monthlyDiff >= 0 ? 'green' : 'red' }}>({monthlyDiff >= 0 ? '+' : ''}{monthlyDiff})</span></div>
                 <div>Rejections: {jobsCurMonth.filter((job) => job.status === 'Rejected').length}</div>
+                <div>Interviews: {jobsCurMonth.filter((job) => job.status === 'Currently Interviewing' || job.status === 'Interview Scheduled').length}</div>
+
             </div>
             <div className='prevMonth'>
                 <h2>Analytics for {months[curMonth - 2]},&nbsp; {prevYear}</h2>
@@ -53,6 +55,7 @@ export default function DashboardPage({ jobs }) {
                 <div>Applications This Year: {jobsCurYear.length}</div>
                 <div>All Time Applications: {jobs.length}</div>
                 <div>Interviews: {jobs.filter((job) => job.status === 'Currently Interviewing' || job.status === 'Interview Scheduled').length}</div>
+                <div>Offers: {jobs.filter((job) => job.status === 'Offer Received').length}</div>
             </div>
         </div>
 
