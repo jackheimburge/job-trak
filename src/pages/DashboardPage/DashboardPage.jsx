@@ -52,6 +52,7 @@ export default function DashboardPage({ jobs }) {
                 <h2>Overall Stats</h2>
                 <div>Applications This Year: {jobsCurYear.length}</div>
                 <div>All Time Applications: {jobs.length}</div>
+                <div>Interviews: {jobs.filter((job) => job.status === 'Currently Interviewing' || job.status === 'Interview Scheduled').length}</div>
             </div>
         </div>
 
