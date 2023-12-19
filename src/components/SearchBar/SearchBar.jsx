@@ -17,7 +17,7 @@ export default function SearchBar({ jobs, setFilteredJobs }) {
 
     return (
         <div className='SearchBar'>
-            <input value={filterText} type="text" placeholder="Search for an job application" onChange={(evt) => setFilterText(evt.target.value)} />
+            <input value={filterText} type="text" placeholder="Search for Application" onChange={(evt) => setFilterText(evt.target.value)} />
         </div>
     );
 }

@@ -37,3 +37,11 @@
     transform: rotate(360deg);
   }
 }
+
+.SearchBar input {
+  width: 50vw;
+  border-radius: 40px;
+  border: 1px solid grey;
+  padding-left: 20px;
+  margin-top: 20px;
+}
