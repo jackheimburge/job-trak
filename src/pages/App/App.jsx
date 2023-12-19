@@ -12,6 +12,7 @@ import * as jobsAPI from '../../utilities/jobs-api';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [jobs, setJobs] = useState([]);
+  const [filteredJobs, setFilteredJobs] = useState([]);
   useEffect(function () {
     async function getJobs() {
       if (user) {
@@ -28,8 +29,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            {/* Route components in here */}
-            <Route path="/" element={<IndexPage jobs={jobs} setJobs={setJobs} />} />
+            <Route path="/" element={<IndexPage jobs={jobs} setJobs={setJobs} setFilteredJobs={setFilteredJobs} filteredJobs={filteredJobs} />} />
             <Route path="/dashboard" element={<DashboardPage user={user} jobs={jobs} />} />
           </Routes>
         </>

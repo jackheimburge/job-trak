@@ -1,9 +1,3 @@
-.IndexPage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 6fr 1fr;
-}
-
 .IndexPage .TableDiv {
     grid-column: span 2;
 }
