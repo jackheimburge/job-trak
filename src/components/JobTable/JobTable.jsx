@@ -57,7 +57,7 @@ export default function JobTable({ jobs, setJobs }) {
             }
         });
         setJobs(sortedJobs);
-        setDateOrder(sortDateOrder === 'asc' ? 'desc' : 'asc');
+        setSortCompanyOrder(sortDateOrder === 'asc' ? 'desc' : 'asc');
     }
 
     function handleStatusClick() {
